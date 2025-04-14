@@ -7,4 +7,8 @@ export default defineConfig({
   build: {
     outDir: "dist",
   },
+  optimizeDeps: {
+    // Fixes "Cannot find module" errors
+    include: ["vite"],
+  },
 });
