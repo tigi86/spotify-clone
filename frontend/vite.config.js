@@ -7,13 +7,4 @@ export default defineConfig({
   build: {
     outDir: "dist",
   },
-  server: {
-    fs: {
-      strict: false, // Relax file permission checks
-    },
-  },
-  optimizeDeps: {
-    // Fixes "Cannot find module" errors
-    include: ["vite"],
-  },
 });

@@ -5,6 +5,15 @@ import tailwindcss from "@tailwindcss/vite";
 export default defineConfig({
   plugins: [react(), tailwindcss()],
   build: {
-    outDir: "dist"
-  }
+    outDir: "dist",
+  },
+  server: {
+    fs: {
+      strict: false, // Relax file permission checks
+    },
+  },
+  optimizeDeps: {
+    // Fixes "Cannot find module" errors
+    include: ["vite"],
+  },
 });
