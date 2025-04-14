@@ -17,6 +17,12 @@ app.use(
     credentials: true, // if you use cookies or auth
   })
 );
+app.use(
+  cors({
+    origin: "https://spotify-clone-admin-traf.onrender.com",
+    credentials: true, // if you use cookies or auth
+  })
+);
 // app config
 
 const port = process.env.PORT || 4000;
